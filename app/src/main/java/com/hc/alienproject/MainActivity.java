@@ -12,12 +12,12 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    protected void initToolBar() {
+    public void initToolBar() {
 
     }
 
     @Override
-    protected void initViews(Bundle savedInstanceState) {
+    public void initViews(Bundle savedInstanceState) {
 
     }
 

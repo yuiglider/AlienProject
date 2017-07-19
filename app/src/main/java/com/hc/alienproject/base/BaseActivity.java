@@ -25,9 +25,9 @@ public abstract class BaseActivity extends RxAppCompatActivity{
         initToolBar();
     }
 
-    protected abstract void initToolBar();
+    public abstract void initToolBar();
 
-    protected abstract void initViews(Bundle savedInstanceState);
+    public abstract void initViews(Bundle savedInstanceState);
 
 
     public abstract int getLayoutID();
