@@ -32,6 +32,10 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     public abstract int getLayoutID();
 
+    public  void initData(){
+
+    };
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

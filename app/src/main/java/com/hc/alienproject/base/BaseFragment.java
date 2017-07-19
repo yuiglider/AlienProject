@@ -29,10 +29,10 @@ public abstract class BaseFragment extends RxFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binder = ButterKnife.bind(this, view);
-        CreateView(savedInstanceState);
+        CreatedView(savedInstanceState);
     }
 
-    public abstract void CreateView(Bundle savedInstanceState);
+    public abstract void CreatedView(Bundle savedInstanceState);
 
     @Override
     public void onDestroyView() {
@@ -41,5 +41,9 @@ public abstract class BaseFragment extends RxFragment {
     }
 
     public abstract LayoutInflater getLayoutID();
+
+    public  void initData(){
+
+    };
 
 }
