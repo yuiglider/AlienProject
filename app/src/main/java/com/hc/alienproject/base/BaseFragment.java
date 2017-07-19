@@ -15,7 +15,8 @@ import butterknife.Unbinder;
  * Created by Administrator on 2017/7/19.
  */
 
-public abstract class BaseFragment extends RxFragment{
+public abstract class BaseFragment extends RxFragment {
+
     private Unbinder binder;
 
     @Nullable
@@ -27,7 +28,7 @@ public abstract class BaseFragment extends RxFragment{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binder= ButterKnife.bind(this,view);
+        binder = ButterKnife.bind(this, view);
         CreateView(savedInstanceState);
     }
 
