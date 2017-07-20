@@ -4,8 +4,8 @@ package com.hc.alienproject.module.common;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.example.yui.alienproject.R;
 import com.hc.alienproject.base.BaseActivity;
+import com.yui.alienproject.R;
 
 public class MainActivity extends BaseActivity {
 

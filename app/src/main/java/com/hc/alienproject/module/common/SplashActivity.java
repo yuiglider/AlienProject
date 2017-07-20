@@ -5,12 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.Window;
 import android.view.WindowManager;
-
-import com.example.yui.alienproject.R;
+import com.yui.alienproject.R;
 import com.trello.rxlifecycle2.components.RxActivity;
-
 import java.util.concurrent.TimeUnit;
-
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import io.reactivex.Observable;
