@@ -3,9 +3,8 @@ package com.hc.alienproject.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-
+import com.hc.alienproject.module.AppConfiguration;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
-
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -20,6 +19,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppConfiguration.getInstance().addActivity(this);
         setContentView(getLayoutID());
         binder = ButterKnife.bind(this);
         initViews(savedInstanceState);
@@ -32,13 +32,15 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     public abstract int getLayoutID();
 
-    public  void initData(){
+    public  void loadData(){
 
-    };
+    }
+
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         binder.unbind();
+        AppConfiguration.getInstance().removeActivity(this);
     }
 }

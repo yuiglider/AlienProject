@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.Window;
 import android.view.WindowManager;
-import com.yui.alienproject.R;
+
 import com.trello.rxlifecycle2.components.RxActivity;
+import com.yui.alienproject.R;
+
 import java.util.concurrent.TimeUnit;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import io.reactivex.Observable;
@@ -30,13 +33,14 @@ public class SplashActivity extends RxActivity {
 
     private void setUpSplash() {
         Observable.timer(2000, TimeUnit.MILLISECONDS)
-                .compose(bindToLifecycle())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<Object>() {
-            @Override
-            public void accept(@NonNull Object o) throws Exception {
-                finishTask();
-            }
-        });
+                .compose(bindToLifecycle()).observeOn(AndroidSchedulers.mainThread()).
+                subscribe(new Consumer<Object>() {
+                    @Override
+                    public void accept(@NonNull Object o) throws Exception {
+                        finishTask();
+
+                    }
+                });
     }
 
     private void finishTask() {
